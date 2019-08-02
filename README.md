@@ -1,6 +1,8 @@
 # NewsHeadsWithMVVMDagger
 HeadLines app proto about listing the headlines, filtering categories and saving for offline display using MVVM arch with Dagger and Room DB
 
+ ![diagram](screen.png)
+
 Used CustomImageLoader that hosts implementation of downloading and saving bitmaps in DiskLRUCache for offline image display.
 And I also wrote my own implementation for downloading bitmaps and compression and also used Glide api for downloading and  saving image bitmaps .
 
