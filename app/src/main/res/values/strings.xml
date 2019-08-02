@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">News Heads</string>
+    <string name="action_search">Search</string>
+    <string name="internet_error">Please connect to Internet for syncing headlines</string>
+    <string name="empty_list_msg">No results.\nTry connecting Internet</string>
+    <string name="api_failure">Something wrong from our end. Please retry again.</string>
+    <string name="title_activity_news_detail">NewsDetailActivity</string>
+</resources>

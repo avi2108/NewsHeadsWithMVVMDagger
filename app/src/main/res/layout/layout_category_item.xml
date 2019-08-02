@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.support.v4.content.ContextCompat" />
+
+
+        <variable
+            name="viewmodel"
+            type="com.sample.newsapi.viewmodels.NewsViewModel" />
+
+        <variable
+            name="item"
+            type="String" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+
+    </data>
+
+    <TextView
+        android:id="@+id/categoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/paddingInfoTile"
+        android:elevation="2dp"
+        android:background="@drawable/bg_white_category_option"
+        android:text="@{item}"
+        android:textSize="@dimen/text_size_filter"
+        app:context="@{context}"
+        app:textForItem="@{viewmodel.categorySelected==position}">
+
+    </TextView>
+</layout>

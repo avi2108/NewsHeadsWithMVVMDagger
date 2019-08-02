@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E41575</color>
+    <color name="colorPrimaryDark">#CE0344</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="image_tile_bg">#fff</color>
+    <color name="colorDescriptionTile">#535252</color>
+    <color name="colorBlack">#0F0F0F</color>
+    <color name="mainBackground">#D5D2D2</color>
+    <color name="white">#fff</color>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.sample.newsapi.models.HeadLine" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="viewModel"
+            type="com.sample.newsapi.viewmodels.NewsViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:id="@+id/cardViewHeadLine"
+        app:cardUseCompatPadding="true"
+        app:onClickHeadLineOpen="@{position}"
+        app:viewModel="@{viewModel}">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/image_tile_bg">
+
+            <ImageView
+                android:id="@+id/image_at_listitem"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="fitXY"
+                app:imageUrl="@{item.imageUrl}" />
+
+            <LinearLayout
+                android:id="@+id/layout_article_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_at_listitem"
+                android:orientation="vertical"
+                android:padding="@dimen/paddingInfoTile">
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_description"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:lineSpacingExtra="0.5dp"
+                    android:text="@{item.title}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="@{item.description}"
+                    android:textColor="@color/colorDescriptionTile"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_source_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@{item.name}"
+                    android:textColor="@color/colorDescriptionTile"
+                    android:textSize="9dp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>
